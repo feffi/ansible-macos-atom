@@ -1,0 +1,16 @@
+---
+- name: Check Sublime 3 settings directory
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Installed Packages"
+    - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Packages/User"
+
+- name: Install PackageControl
+  get_url:
+    url: "http://packagecontrol.io/Package Control.sublime-package"
+    dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Installed Packages"
+    owner: "{{ ansible_user_id }}"
+    group:  "{{ ansible_user_gid }}"
+    mode: 0644
