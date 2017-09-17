@@ -23,30 +23,30 @@
             - "Thumbs.db"
             - ".Spotlight-V100"
             - ".Trashes"
-            - "*.aux",
-            - "*.fls",
-            - "*.idx",
-            - "*.out",
-            - "*.fdb_latexmk",
-            - "*.pyc",
-            - "*.pyo",
-            - "*.exe",
-            - "*.dll",
-            - "*.obj",
-            - "*.o",
-            - "*.a",
-            - "*.lib",
-            - "*.so",
-            - "*.dylib",
-            - "*.ncb",
-            - "*.sdf",
-            - "*.suo",
-            - "*.pdb",
-            - "*.idb",
-            - ".DS_Store",
-            - "*.class",
-            - "*.psd",
-            - "*.db",
+            - "*.aux"
+            - "*.fls"
+            - "*.idx"
+            - "*.out"
+            - "*.fdb_latexmk"
+            - "*.pyc"
+            - "*.pyo"
+            - "*.exe"
+            - "*.dll"
+            - "*.obj"
+            - "*.o"
+            - "*.a"
+            - "*.lib"
+            - "*.so"
+            - "*.dylib"
+            - "*.ncb"
+            - "*.sdf"
+            - "*.suo"
+            - "*.pdb"
+            - "*.idb"
+            - ".DS_Store"
+            - "*.class"
+            - "*.psd"
+            - "*.db"
             - "*.sublime-workspace"
         folder_exclude_patterns: []
         ignored_packages:
