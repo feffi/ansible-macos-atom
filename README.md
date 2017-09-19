@@ -1,5 +1,5 @@
 # ansible-macos-sublime
-Ansible role to manage personal sublime pictures in macOS.
+Ansible role to manage a sublime installation on macOS.
 
 [![Build Status](https://img.shields.io/travis/feffi/ansible-macos-sublime.svg)](https://travis-ci.org/feffi/ansible-macos-sublime) [![Github All Releases](https://img.shields.io/github/downloads/feffi/ansible-macos-sublime/total.svg)](https://github.com/feffi/ansible-macos-sublime) [![GitHub forks](https://img.shields.io/github/forks/feffi/ansible-macos-sublime.svg?style=social&label=Fork)](https://github.com/feffi/ansible-macos-sublime) [![GitHub stars](https://img.shields.io/github/stars/feffi/ansible-macos-sublime.svg?style=social&label=Star)](https://github.com/feffi/ansible-macos-sublime) [![GitHub watchers](https://img.shields.io/github/watchers/feffi/ansible-macos-sublime.svg?style=social&label=Watch)](https://github.com/feffi/ansible-macos-sublime) [![Twitter Follow](https://img.shields.io/twitter/follow/feffi1.svg?style=social&label=Follow)](https://twitter.com/feffi1) [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/feffi/ansible-macos-sublime/blob/master/LICENSE)
 
