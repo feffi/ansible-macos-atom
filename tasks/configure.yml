@@ -4,7 +4,7 @@
     dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
     block: |
       {{ macos_sublime.preferences | to_nice_json }}
-    when: macos_sublime.preferences
+  when: macos_sublime.preferences
 
 - name: Render packagecontrol preferences
   blockinfile:
@@ -19,14 +19,14 @@
       {% endfor %}
           ]
       }
-    when: macos_sublime.packagecontrol
+  when: macos_sublime.packagecontrol
 
 - name: Render sublime license
   blockinfile:
     dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Local/License.sublime_license"
     block: |
       {{ macos_sublime.license }}
-    when: macos_sublime.license
+  when: macos_sublime.license
 
 
 
