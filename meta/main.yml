@@ -24,6 +24,8 @@ dependencies:
         casks: [
           { name: "sublime-text" }
         ],
-        taps: []
+        taps: [],
+        packages: [],
+        brews: []
       }
     }

@@ -6,6 +6,7 @@
   with_items:
     - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Installed Packages"
     - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Packages/User"
+    - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Local"
 
 - name: Install PackageControl
   get_url:
