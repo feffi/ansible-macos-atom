@@ -45,7 +45,7 @@ macos_atom:
 ```
 
 ## Dependencies
-* [![ansible-macos_homebrew](https://github.com/feffi/ansible-macos-homebrew)](https://github.com/feffi/ansible-macos-homebrew)
+* [ansible-macos-homebrew](https://github.com/feffi/ansible-macos-homebrew)
 
 ## Example Playbook
 
