@@ -1,37 +1,8 @@
 ---
-- name: Render user preferences
+- name: Render atom user preferences
   blockinfile:
-    dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+    dest: "{{ ansible_env.HOME }}/.atom/config.cson"
     create: true
     block: |
-      {{ macos_sublime.preferences | to_nice_json }}
-  when: macos_sublime.preferences
-
-- name: Render packagecontrol preferences
-  blockinfile:
-    dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
-    create: true
-    block: |
-      {
-          "installed_packages":
-          [
-      {% for package in macos_sublime.packagecontrol %}
-              "{{ package }}"{% if not loop.last %},{% endif %}
-
-      {% endfor %}
-          ]
-      }
-  when: macos_sublime.packagecontrol
-
-- name: Render sublime license
-  blockinfile:
-    dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Local/License.sublime_license"
-    create: true
-    block: |
-      {{ macos_sublime.license }}
-  when: macos_sublime.license
-
-
-
-
-
+      {{ macos_atom.preferences | to_nice_json }}
+  when: macos_atom.preferences

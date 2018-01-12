@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Kevin Wennemuth
-  description: Ansible role to manage a sublime installation on macOS
+  description: Ansible role to manage a atom installation on macOS
   license: MIT
   min_ansible_version: 2.4.0.0
   platforms:
@@ -14,15 +14,14 @@ galaxy_info:
     - macos
     - config
     - editor
-    - sublime
+    - atom
     - settings
-    - packagecontrol
     - packages
 dependencies:
   - { role: feffi.macos-homebrew,
       macos_homebrew: {
         casks: [
-          { name: "sublime-text" }
+          { name: "atom" }
         ],
         taps: [],
         packages: [],

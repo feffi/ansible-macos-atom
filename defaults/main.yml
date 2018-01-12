@@ -1,10 +1,7 @@
 ---
-macos_sublime:
-  # The Sublime license to set
-  license: ""
-
+macos_atom:
   # Settings to be placed in the Sublime user preferences
   preferences: []
 
   # Packages to be installed via PackageControl.io
-  packagecontrol: []
+  packages: []

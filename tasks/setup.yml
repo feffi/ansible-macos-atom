@@ -1,17 +1,6 @@
 ---
-- name: Check Sublime 3 settings directory
-  file:
-    path: "{{ item }}"
-    state: directory
-  with_items:
-    - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Installed Packages"
-    - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Packages/User"
-    - "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Local"
-
-- name: Install PackageControl
-  get_url:
-    url: "http://packagecontrol.io/Package Control.sublime-package"
-    dest: "{{ ansible_env.HOME }}/Library/Application Support/Sublime Text 3/Installed Packages"
-    owner: "{{ ansible_user_id }}"
-    group:  "{{ ansible_user_gid }}"
-    mode: 0644
+- name: Install atom packages
+  shell: "apm list --bare | grep -E '^{{ item }}@' && echo 'Already installed.' || apm install '{{ item }}'"
+  with_items: "{{ macos_atom.packages }}"
+  register: apm_result
+  changed_when: "'Already installed.' not in apm_result.stdout"
