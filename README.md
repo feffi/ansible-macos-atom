@@ -26,14 +26,26 @@ All role based variables are listed below, along with default values:
 macos_atom:
   # Settings to be placed in the atom user preferences
   preferences:
+    "*":
+      core:
+        disabledPackages: [
+          ...
+        ],
+        projectHome: "/Users/fooo/"
+        ...
 
-
-  # Packages to be installed via apm
-  packages:
+  # Packages to be installed via PackageControl.io
+  packages: [
+    { name: "archive-view" },
+    { name: "autocomplete-atom-api" },
+    { name: "autocomplete-css", enabled: false },
+    { name: "autocomplete-html", enabled: false },
+    ...
+  ]
 ```
 
 ## Dependencies
-None.
+* [![ansible-macos_homebrew](https://github.com/feffi/ansible-macos-homebrew)](https://github.com/feffi/ansible-macos-homebrew)
 
 ## Example Playbook
 
@@ -41,9 +53,10 @@ None.
     - hosts: all
       vars:
         macos_atom:
-
           preferences:
+            ...
           packages:
+            ...
       roles:
         - { role: feffi.macos-atom }
 ```
@@ -55,8 +68,10 @@ Or with local parameters:
         - { role: feffi.macos-atom,
             macos_atom: {
               preferences: {
+                ...
               },
               packages: [
+                ...
               ]
             }
           }

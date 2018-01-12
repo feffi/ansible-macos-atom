@@ -4,3 +4,8 @@
   with_items: "{{ macos_atom.packages }}"
   register: apm_result
   changed_when: "'Already installed.' not in apm_result.stdout"
+
+- name: Check for disabled atom packages
+  shell: "apm disable {{ item }}"
+  with_items: "{{ macos_atom.packages }}"
+  when: not item.enabled
